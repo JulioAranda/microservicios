@@ -1,0 +1,45 @@
+package com.netec.services;
+
+import java.util.List;
+
+import com.netec.entities.Cliente;
+
+public class ClienteServiceImpl implements IClienteService {
+
+	@Override
+	public Cliente insert(Cliente Cliente) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Cliente findById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void update(Cliente Cliente) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void deleteById(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<Cliente> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Cliente> findByCorreo(String marca) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

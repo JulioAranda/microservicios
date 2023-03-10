@@ -1,0 +1,4 @@
+spring.application.name=micro-carritof
+server.port=9093
+
+micro-articulo.ribbon.listOfServers=localhost:9091, localhost:9095, localhost:9096

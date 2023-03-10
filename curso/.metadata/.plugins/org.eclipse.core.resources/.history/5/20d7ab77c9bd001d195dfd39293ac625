@@ -1,0 +1,2 @@
+spring.application.name=micro-carritof
+server.port=9093

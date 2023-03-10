@@ -1,0 +1,20 @@
+package com.netec.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.netec.services.ICarritoService;
+
+@RestController
+public class CarritoController {
+	
+	@Autowired
+	private ICarritoService carritoService;
+	
+	@PostMapping("/{id}")
+	public boolean insert(int id) {
+		return carritoService.insert(id);
+	}
+
+}

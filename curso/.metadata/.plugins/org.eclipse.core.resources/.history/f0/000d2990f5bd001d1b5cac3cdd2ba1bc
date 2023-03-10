@@ -1,0 +1,16 @@
+package com.netec.services;
+
+import java.util.List;
+
+import com.netec.entities.Cliente;
+
+public interface IClienteService {
+	Cliente insert(Cliente Cliente);
+	Cliente findById(int id);
+	void update(Cliente Cliente);
+	void deleteById(int id);
+	List<Cliente> findAll();
+	List<Cliente> findByCorreo(String marca);
+
+
+}

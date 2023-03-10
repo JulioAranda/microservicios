@@ -1,0 +1,7 @@
+#nombre del microservicio y puerto
+spring.application.name=micro-articulo
+server.port=9091
+
+#configuracion de hibernate
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL8Dialect
+spring.jpa.hibernate.ddl-auto=update

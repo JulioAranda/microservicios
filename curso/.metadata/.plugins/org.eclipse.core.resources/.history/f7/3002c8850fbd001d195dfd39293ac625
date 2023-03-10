@@ -1,0 +1,5 @@
+package com.netec.entities;
+
+public class Articulo {
+
+}

@@ -1,0 +1,48 @@
+package com.netec.services;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.netec.entities.Articulo;
+
+@Service
+public class ArticuloServiceImpl implements IArticuloService {
+
+	@Override
+	public Articulo insert(Articulo articulo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Articulo findById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void update(Articulo articulo) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void deleteById(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<Articulo> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Articulo> findByMarca(String marca) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

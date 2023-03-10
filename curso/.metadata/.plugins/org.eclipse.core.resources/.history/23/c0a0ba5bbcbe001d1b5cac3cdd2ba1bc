@@ -1,0 +1,7 @@
+spring.application.name=micro-pedido
+server.port=8003
+
+
+#config de eureka
+eureka.client.service-url.defaultZone=http://localhost:8888/eureka
+

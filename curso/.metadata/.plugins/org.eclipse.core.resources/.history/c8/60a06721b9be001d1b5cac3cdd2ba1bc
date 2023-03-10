@@ -1,0 +1,9 @@
+spring.application.name=micro-pedido
+server.port=9093
+
+#Configuracion de ribbon
+#micro-articulo.ribbon.listOfServers=localhost:9091, localhost:9095, localhost:9096
+
+#config de eureka
+eureka.client.service-url.defaultZone=http://localhost:9999/eureka
+

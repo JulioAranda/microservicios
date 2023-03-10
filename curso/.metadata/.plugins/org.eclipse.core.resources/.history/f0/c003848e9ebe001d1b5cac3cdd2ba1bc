@@ -1,0 +1,14 @@
+package com.netec;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.circuitbreaker.CircuitBreakerFactory;
+import org.springframework.cloud.client.circuitbreaker.ConfigBuilder;
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class ConfigResilience {
+	
+	@Autowired
+	CircuitBreakerFactory<CONF, ConfigBuilder<CONF>> cbF;
+
+}

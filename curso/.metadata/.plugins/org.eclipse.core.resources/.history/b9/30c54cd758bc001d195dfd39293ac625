@@ -1,0 +1,3 @@
+#nombre del microservicio y puerto
+spring.application.name=micro-articulo
+server.port=9091

@@ -1,0 +1,56 @@
+package com.netec.services;
+
+import java.util.List;
+import java.util.stream.Stream;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.netec.dao.IArticuloDAO;
+import com.netec.entities.Articulo;
+
+@Service
+public class ArticuloServiceImpl implements IArticuloService {
+	
+	@Autowired
+	private IArticuloDAO articuloDAO;
+
+	@Override
+	public Articulo insert(Articulo articulo) {
+		return articuloDAO.save(articulo);
+	}
+
+	@Override
+	public Articulo findById(int id) {
+		return articuloDAO.findById(id)
+				.orElseThrow(() -> new RuntimeException("No hay"));
+	}
+
+	@Override
+	public void update(Articulo articulo) {
+		Stream.of(articulo)
+		.filter(a -> articuloDAO.existsById(a.getId()))
+		.peek(a -> articuloDAO.save(a))
+		.findFirst()
+		.orElseThrow(() -> new RuntimeException("No hay"));
+
+	}
+
+	@Override
+	public void deleteById(int id) {
+		articuloDAO.deleteById(id);
+	}
+	
+
+	@Override
+	public List<Articulo> findAll() {
+		return (List<Articulo>)articuloDAO.findAll();
+	}
+
+	@Override
+	public List<Articulo> findByMarca(String marca) {
+		return articuloDAO.buscarPorMarca(marca)
+				;
+	}
+
+}

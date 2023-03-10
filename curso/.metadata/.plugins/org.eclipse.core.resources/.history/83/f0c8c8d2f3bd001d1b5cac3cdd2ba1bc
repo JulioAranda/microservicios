@@ -1,0 +1,5 @@
+package com.netec.dao;
+
+public interface IClienteDAO {
+
+}

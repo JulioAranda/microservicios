@@ -1,0 +1,59 @@
+package com.netec.services;
+
+import java.util.List;
+import java.util.stream.Stream;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Service;
+
+import com.netec.dao.IPedidoDAO;
+import com.netec.entities.Articulo;
+import com.netec.entities.Pedido;
+
+@Service
+public class PedidoServiceImpl implements IPedidoService {
+	
+	@Autowired
+	private IPedidoDAO pedidoDAO;
+	
+	@Value("${server.port}")
+	private int port;
+
+	@Override
+	public Pedido insert(Pedido pedido) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void update(Pedido articulo) {
+		Stream.of(articulo)
+		.filter(a -> articuloDAO.existsById(a.getId()))
+		.peek(a -> articuloDAO.save(a))
+		.findFirst()
+		.orElseThrow(() -> new RuntimeException("No hay"));
+		
+	}
+	
+	@Override
+	public void deleteById(int id) {
+		pedidoDAO.deleteById(id);
+	}
+	
+	@Override
+	public List<Pedido> findAll() {
+		return (List<Pedido>)pedidoDAO.findAll();
+	}
+	
+	@Override
+	public Pedido findById(int id) {
+		return pedidoDAO.findById(id)
+				.stream()
+				.filter(p -> p != null)
+				.peek( p -> p.setPort(port))
+				.findFirst()
+				.orElseThrow(() -> new RuntimeException("No hay"));
+	}
+
+}

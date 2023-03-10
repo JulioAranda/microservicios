@@ -1,0 +1,5 @@
+package com.netec.services;
+
+public class PedidoServiceImpl implements IPedidoService {
+
+}

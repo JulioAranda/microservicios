@@ -1,0 +1,11 @@
+package com.netec.entities;
+
+public class Cliente {
+	
+	private int id;
+	private String nombre;
+	private String correo;
+	private int edad;
+	private int port;
+
+}
